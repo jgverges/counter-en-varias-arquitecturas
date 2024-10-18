@@ -1,10 +1,7 @@
-# Arquitectura MVVM (Model-View-ViewModel)
+// Arquitectura MVVM (Model-View-ViewModel)
 
-MVVM separa la lógica de negocio y presentación (ViewModel) de la interfaz de usuario (View).
 
-El Model representa los datos y la lógica de negocio.
 
-```tsx
 "use client"
 
 import { useState, useEffect } from 'react'
@@ -88,4 +85,3 @@ export default function MVVMCounter() {
     </Card>
   )
 }
-```

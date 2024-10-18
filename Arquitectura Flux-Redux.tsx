@@ -1,9 +1,6 @@
-# Arquitectura Flux/Redux
+// Arquitectura Flux/Redux
 
-Flux es un patrón de arquitectura que utiliza un flujo de datos unidireccional. Redux es una implementación popular de Flux. 
-Aquí hay un ejemplo utilizando Redux Toolkit, que simplifica la configuración de Redux:
 
-```tsx
 "use client"
 
 import { useState } from 'react'
@@ -68,5 +65,3 @@ export default function ReduxCounter() {
     </Provider>
   )
 }
-
-```

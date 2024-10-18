@@ -1,6 +1,5 @@
-# counter con arquitectura hexagonal
+// counter con arquitectura hexagonal
 
-```tsx project="HexagonalCounter" file="hexagonal-counter.tsx"
 "use client"
 
 import { useState } from 'react'
@@ -104,54 +103,10 @@ export default function HexagonalCounter() {
     </Card>
   )
 }
-```
-
-Explicación de la arquitectura hexagonal implementada:
-
-## **Dominio**: 
-
-La clase `Counter` representa nuestro modelo de dominio. Contiene la lógica de negocio para incrementar y decrementar el contador.
-
-## **Puertos**:
-
-1. `CounterRepository`: Define cómo se debe persistir y recuperar el estado del contador.
-2. `CounterPresenter`: Define cómo se debe mostrar el estado del contador.
 
 
+// ## Version simplificada 
 
-##  **Adaptadores**:
-
-1. `InMemoryCounterRepository`: Implementa `CounterRepository` para almacenar el contador en memoria.
-2. `ReactCounterPresenter`: Implementa `CounterPresenter` para actualizar el estado de React.
-
-
-
-## **Casos de uso**:
-
-`IncrementUseCase` y `DecrementUseCase` orquestan las operaciones utilizando el repositorio y el presentador.
-
-##  **Componente React**: 
-
-Actúa como un adaptador de UI, inicializando la arquitectura y manejando las interacciones del usuario.
-
-
-Esta arquitectura hexagonal nos proporciona varias ventajas:
-
-- **Independencia del framework**: El dominio y los casos de uso no dependen de React o cualquier otra tecnología externa.
-- **Fácil de testear**: Podemos probar cada parte de la aplicación de forma aislada.
-- **Flexibilidad**: Podemos cambiar fácilmente la implementación del repositorio (por ejemplo, para usar localStorage o una API) sin afectar al resto de la aplicación.
-- **Separación de responsabilidades**: Cada parte de la aplicación tiene una responsabilidad clara y bien definida.
-
-
-Esta implementación demuestra cómo incluso una aplicación simple como un contador puede beneficiarse de una arquitectura robusta y flexible.
-
-## Version simplificada porque fallaba preview de v0 vercel
-
-Entiendo que el contador sigue sin funcionar. Vamos a simplificar aún más el código y asegurarnos de que funcione correctamente en la vista previa.
-
-Vamos a reescribir el componente con una versión muy simplificada que mantenga la esencia de la arquitectura hexagonal:
-
-```tsx project="HexagonalCounter" file="hexagonal-counter.tsx"
 "use client"
 
 import { useState } from 'react'
@@ -204,25 +159,21 @@ export default function HexagonalCounter() {
     </Card>
   )
 }
-```
 
-En esta versión simplificada:
+// En esta versión simplificada:
 
-1. Hemos reemplazado las clases por funciones simples.
-2. El "dominio" se representa mediante las funciones `incrementCounter` y `decrementCounter`.
-3. El "puerto" se define como un tipo de función `CounterPort`.
-4. El "adaptador" es una función que crea una implementación del puerto utilizando `setValue` de React.
-5. Los "casos de uso" son funciones que utilizan el dominio y el adaptador para realizar las operaciones.
-6. El componente React actúa como el adaptador de UI, utilizando los casos de uso para manejar los clics de los botones.
-
-
-Esta implementación mantiene la esencia de la arquitectura hexagonal:
-
-- Separación de responsabilidades entre dominio, puertos, adaptadores y casos de uso.
-- El dominio (lógica de negocio) está aislado de la implementación de UI.
-- Los casos de uso orquestan las operaciones utilizando el dominio y los adaptadores.
+// 1. Hemos reemplazado las clases por funciones simples.
+// 2. El "dominio" se representa mediante las funciones `incrementCounter` y `decrementCounter`.
+// 3. El "puerto" se define como un tipo de función `CounterPort`.
+// 4. El "adaptador" es una función que crea una implementación del puerto utilizando `setValue` de React.
+// 5. Los "casos de uso" son funciones que utilizan el dominio y el adaptador para realizar las operaciones.
+// 6. El componente React actúa como el adaptador de UI, utilizando los casos de uso para manejar los clics de los botones.
 
 
-Esta versión simplificada debería funcionar correctamente en la vista previa. Los botones de incremento y decremento deberían actualizar el valor del contador, y el componente se debería re-renderizar correctamente.
+// Esta implementación mantiene la esencia de la arquitectura hexagonal:
 
-Si aún así la vista previa no funciona, por favor, házmelo saber y buscaremos una solución alternativa o investigaremos si hay algún problema con el entorno de ejecución.
+// - Separación de responsabilidades entre dominio, puertos, adaptadores y casos de uso.
+// - El dominio (lógica de negocio) está aislado de la implementación de UI.
+// - Los casos de uso orquestan las operaciones utilizando el dominio y los adaptadores.
+
+

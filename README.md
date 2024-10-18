@@ -1,6 +1,6 @@
 # Counter
 
-###  Simple counter en varias arquitectures
+###  Comparativa de un simple counter desarrollado en varias arquitecturas diferentes
 - Clean
 - Hexagonal
 - MVVM
@@ -18,6 +18,22 @@
 
 
 
+- **Capa de Entidades**: Definimos la entidad `CounterEntity` que representa el estado del contador.
+- **Capa de Casos de Uso**: Creamos dos casos de uso, `IncrementUseCase` y `DecrementUseCase`, que encapsulan la lógica de negocio para incrementar y decrementar el contador.
+- **Capa de Presentación**: El componente React `CleanCounter` actúa como la capa de presentación. Utiliza los casos de uso para modificar el estado del contador y renderiza la interfaz de usuario.
+- **Capa de Repositorio**: En este ejemplo simple, no necesitamos una capa de repositorio ya que no estamos persistiendo datos. Si necesitáramos guardar el estado del contador en algún almacenamiento, añadiríamos esta capa.
+
+
+Esta estructura CLEAN permite una clara separación de responsabilidades:
+
+- La lógica de negocio (incrementar/decrementar) está aislada en los casos de uso.
+- La entidad `CounterEntity` define la estructura de datos del contador.
+- El componente React se encarga únicamente de la presentación y la gestión del estado local.
+
+
+Esta arquitectura CLEAN hace que sea fácil extender la aplicación en el futuro. Por ejemplo, si quisiéramos añadir persistencia de datos, podríamos introducir una capa de repositorio sin necesidad de modificar los casos de uso o la capa de presentación.
+
+
 ## 2. Arquitectura Hexagonal (Puertos y Adaptadores):
 
 ![image](https://github.com/user-attachments/assets/cefbd0e0-df67-40ed-b863-c850191f0251)
@@ -27,6 +43,43 @@
 3. Ventaja: Flexibilidad para cambiar tecnologías externas sin afectar el núcleo de la aplicación.
 4. Desventaja: Puede resultar en más código boilerplate.
 
+
+## **Dominio**: 
+
+La clase `Counter` representa nuestro modelo de dominio. Contiene la lógica de negocio para incrementar y decrementar el contador.
+
+## **Puertos**:
+
+1. `CounterRepository`: Define cómo se debe persistir y recuperar el estado del contador.
+2. `CounterPresenter`: Define cómo se debe mostrar el estado del contador.
+
+
+
+##  **Adaptadores**:
+
+1. `InMemoryCounterRepository`: Implementa `CounterRepository` para almacenar el contador en memoria.
+2. `ReactCounterPresenter`: Implementa `CounterPresenter` para actualizar el estado de React.
+
+
+
+## **Casos de uso**:
+
+`IncrementUseCase` y `DecrementUseCase` orquestan las operaciones utilizando el repositorio y el presentador.
+
+##  **Componente React**: 
+
+Actúa como un adaptador de UI, inicializando la arquitectura y manejando las interacciones del usuario.
+
+
+Esta arquitectura hexagonal nos proporciona varias ventajas:
+
+- **Independencia del framework**: El dominio y los casos de uso no dependen de React o cualquier otra tecnología externa.
+- **Fácil de testear**: Podemos probar cada parte de la aplicación de forma aislada.
+- **Flexibilidad**: Podemos cambiar fácilmente la implementación del repositorio (por ejemplo, para usar localStorage o una API) sin afectar al resto de la aplicación.
+- **Separación de responsabilidades**: Cada parte de la aplicación tiene una responsabilidad clara y bien definida.
+
+
+Esta implementación demuestra cómo incluso una aplicación simple como un contador puede beneficiarse de una arquitectura robusta y flexible.
 
 
 ## 3. Arquitectura MVC (Model-View-Controller):
@@ -39,6 +92,9 @@
 4. Desventaja: El Controlador puede volverse demasiado grande en aplicaciones complejas.
 
 
+En MVC, el Modelo representa los datos, la Vista es la interfaz de usuario, 
+y el Controlador maneja la lógica de la aplicación y la comunicación entre el Modelo y la Vista.
+
 
 ## 4. Arquitectura Flux/Redux:
 
@@ -48,6 +104,8 @@
 2. Componentes: Store, Actions, Reducers y View.
 3. Ventaja: Gestión de estado predecible y fácil de depurar, especialmente útil en aplicaciones grandes.
 4. Desventaja: Puede ser excesivo para aplicaciones simples y requiere más código boilerplate.
+
+Flux es un patrón de arquitectura que utiliza un flujo de datos unidireccional. Redux es una implementación popular de Flux. 
 
 
 
@@ -61,8 +119,11 @@
 4. Desventaja: Puede ser confuso determinar qué lógica va en el ViewModel vs el Modelo.
 
 
+MVVM separa la lógica de negocio y presentación (ViewModel) de la interfaz de usuario (View).
 
-## Comparacion
+El Model representa los datos y la lógica de negocio.
+
+## Comparacion entre las distintas arquitecturas
 
 ### 1. Complejidad:
 

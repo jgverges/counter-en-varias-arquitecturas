@@ -1,10 +1,6 @@
-# Arquitectura MVC (Model-View-Controller)
+// Arquitectura MVC (Model-View-Controller)
 
 
-En MVC, el Modelo representa los datos, la Vista es la interfaz de usuario, 
-y el Controlador maneja la lógica de la aplicación y la comunicación entre el Modelo y la Vista.
-
-```tsx
 "use client"
 
 import { useState, useEffect } from 'react'
@@ -81,4 +77,4 @@ export default function MVCCounter() {
     </Card>
   )
 }
-```
+
