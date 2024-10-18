@@ -1,4 +1,4 @@
-# counter-clean-architecture
+# Simple counter en varias arquitectures
 
 Simple counter hecho en diferentes aruitecturas:
 - Clean
