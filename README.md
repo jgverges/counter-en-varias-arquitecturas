@@ -42,7 +42,7 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 
-## 4. Arquitectura Flux/Redux:
+## 4. Arquitectura Flux/Redux:
 
 ![image](https://github.com/user-attachments/assets/cfce33a6-f1a6-4071-9bec-78cf434d9bc8)
 
@@ -53,7 +53,7 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 
-5. Arquitectura MVVM (Model-View-ViewModel):
+## 5. Arquitectura MVVM (Model-View-ViewModel):
 
 ![image](https://github.com/user-attachments/assets/ea53b625-0f6d-42e2-bec9-e33c3010d5ec)
 
@@ -64,8 +64,7 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 
-
-## Comparación:
+## Comparacion
 
 ### 1. Complejidad:
 
@@ -116,16 +115,4 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 Cada arquitectura tiene sus fortalezas y debilidades. La elección depende del tamaño y la complejidad del proyecto, los requisitos de escalabilidad y mantenibilidad, y la experiencia del equipo de desarrollo. Para una aplicación simple como un contador, una arquitectura más ligera como MVC o MVVM podría ser suficiente, mientras que para aplicaciones más complejas, CLEAN, Hexagonal o Flux/Redux podrían ofrecer beneficios significativos a largo plazo.
-
-![image](https://github.com/user-attachments/assets/8a085861-0185-49cd-9a7a-b2d4f4d265d1)
-
-![image](https://github.com/user-attachments/assets/cefbd0e0-df67-40ed-b863-c850191f0251)
-
-![image](https://github.com/user-attachments/assets/d9eace2c-58ae-457c-8ea3-3b5179afdcc1)
-
-![image](https://github.com/user-attachments/assets/cfce33a6-f1a6-4071-9bec-78cf434d9bc8)
-
-![image](https://github.com/user-attachments/assets/ea53b625-0f6d-42e2-bec9-e33c3010d5ec)
-
-
 
