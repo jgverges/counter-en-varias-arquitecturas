@@ -1,8 +1,6 @@
 # Counter
 
-##  Simple counter en varias arquitectures
-
-Simple counter hecho en diferentes arquitecturas:
+###  Simple counter en varias arquitectures
 - Clean
 - Hexagonal
 - MVVM
