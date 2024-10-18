@@ -11,6 +11,7 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 ## 1- Arquitectura CLEAN:
+![image](https://github.com/user-attachments/assets/8a085861-0185-49cd-9a7a-b2d4f4d265d1)
 
 1. Principio: Separación de responsabilidades en capas bien definidas.
 2. Capas: Entidades, Casos de Uso, Adaptadores de Interfaz, y Frameworks/Drivers.
@@ -21,6 +22,8 @@ Simple counter hecho en diferentes arquitecturas:
 
 ## 2. Arquitectura Hexagonal (Puertos y Adaptadores):
 
+![image](https://github.com/user-attachments/assets/cefbd0e0-df67-40ed-b863-c850191f0251)
+
 1. Principio: Aislar la lógica de negocio del mundo exterior mediante puertos y adaptadores.
 2. Componentes: Dominio central, Puertos (interfaces), y Adaptadores.
 3. Ventaja: Flexibilidad para cambiar tecnologías externas sin afectar el núcleo de la aplicación.
@@ -29,6 +32,8 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 ## 3. Arquitectura MVC (Model-View-Controller):
+
+![image](https://github.com/user-attachments/assets/d9eace2c-58ae-457c-8ea3-3b5179afdcc1)
 
 1. Principio: Separar la lógica de negocio (Model), la presentación (View) y la lógica de control (Controller).
 2. Componentes: Modelo, Vista y Controlador.
@@ -39,6 +44,8 @@ Simple counter hecho en diferentes arquitecturas:
 
 ## 4. Arquitectura Flux/Redux:
 
+![image](https://github.com/user-attachments/assets/cfce33a6-f1a6-4071-9bec-78cf434d9bc8)
+
 1. Principio: Flujo de datos unidireccional y estado centralizado.
 2. Componentes: Store, Actions, Reducers y View.
 3. Ventaja: Gestión de estado predecible y fácil de depurar, especialmente útil en aplicaciones grandes.
@@ -47,6 +54,8 @@ Simple counter hecho en diferentes arquitecturas:
 
 
 5. Arquitectura MVVM (Model-View-ViewModel):
+
+![image](https://github.com/user-attachments/assets/ea53b625-0f6d-42e2-bec9-e33c3010d5ec)
 
 1. Principio: Separar la lógica de presentación (ViewModel) de la interfaz de usuario (View).
 2. Componentes: Modelo, Vista y ViewModel.
