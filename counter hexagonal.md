@@ -1,9 +1,5 @@
 # counter con arquitectura hexagonal
 
-Claro, voy a recrear el ejemplo del contador utilizando la arquitectura hexagonal (también conocida como arquitectura de puertos y adaptadores). Esta arquitectura nos permite separar aún más las preocupaciones y hacer que nuestra aplicación sea más flexible y fácil de mantener.
-
-Aquí está la implementación del contador utilizando arquitectura hexagonal:
-
 ```tsx project="HexagonalCounter" file="hexagonal-counter.tsx"
 "use client"
 
