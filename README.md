@@ -1,4 +1,6 @@
-# Simple counter en varias arquitectures
+# Counter
+
+##  Simple counter en varias arquitectures
 
 Simple counter hecho en diferentes aruitecturas:
 - Clean
