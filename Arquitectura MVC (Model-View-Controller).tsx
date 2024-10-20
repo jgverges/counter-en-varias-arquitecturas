@@ -65,3 +65,7 @@ export default function MVCCounter() {
     </>
   );
 }
+
+// Si necesitas conservar el estado al cambiar de componente y volver, debes usar una solución de 
+// estado global, como Zustand o Redux, o
+// almacenar el estado en un componente de nivel superior que no se desmonte.
