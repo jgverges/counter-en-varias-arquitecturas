@@ -44,10 +44,10 @@ import { useState, useEffect } from 'react'
 
 export default function MVCCounter() {
   const [value, setValue] = useState(0);
-  const controllerRef = useRef<CounterController | null>(null);
+  const controllerRef = useRef<CounterController | null>(null); 
 
   useEffect(() => {
-    if (!controllerRef.current) {
+    if (!controllerRef.current) {   // Para evitar reinstanciar el controlador si cambia de componente
       const model = new CounterModel();
       const newController = new CounterController(model, setValue);
       controllerRef.current = newController;
