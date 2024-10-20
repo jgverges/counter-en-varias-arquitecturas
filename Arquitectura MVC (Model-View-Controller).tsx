@@ -57,7 +57,7 @@ export default function MVCCounter() {
 
   return (
     <>
-      <h1>MVC</h1>
+      <h1> Arquitectura MVC Model-View-Controller</h1>
       
       <h2>{value}</h2>
       
