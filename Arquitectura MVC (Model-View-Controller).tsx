@@ -19,13 +19,10 @@ class CounterModel {
 
 // Controlador
 class CounterController {
-  private model: CounterModel
-  private setViewValue: (value: number) => void
-
-  constructor(model: CounterModel, setViewValue: (value: number) => void) {
-    this.model = model
-    this.setViewValue = setViewValue
-  }
+  constructor(
+      private model: CounterModel, 
+      private setViewValue: (value: number) => void
+    ) {}
 
   increment(): void {
     this.model.increment()
