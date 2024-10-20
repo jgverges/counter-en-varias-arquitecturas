@@ -43,26 +43,25 @@ class CounterController {
 import { useState, useEffect } from 'react'
 
 export default function MVCCounter() {
-  const [value, setValue] = useState(0)
-  const [controller, setController] = useState<CounterController | null>(null)
+  const [value, setValue] = useState(0);
+  const controllerRef = useRef<CounterController | null>(null);
 
   useEffect(() => {
-    const model = new CounterModel()
-    const newController = new CounterController(model, setValue)
-    setController(newController)
-  }, [])
+    if (!controllerRef.current) {
+      const model = new CounterModel();
+      const newController = new CounterController(model, setValue);
+      controllerRef.current = newController;
+    }
+  }, []); // Solo se ejecuta en el montaje inicial
 
   return (
     <>
-      <h1> Arquitectura MVC Model-View-Controller</h1>
+      <h1>Arquitectura MVC Model-View-Controller</h1>
       
       <h2>{value}</h2>
       
-        <Button onClick={() => controller?.decrement()}>-</Button>
-      
-        <Button onClick={() => controller?.increment()}>+</Button>
+      <Button onClick={() => controllerRef.current?.decrement()}>-</Button>
+      <Button onClick={() => controllerRef.current?.increment()}>+</Button>
     </>
-  )
+  );
 }
-
-
