@@ -8,6 +8,17 @@
 - MVC
 
 
+
+| **Criterio**               | **MVC**                              | **MVVM**                            | **Flux/Redux**                      | **CLEAN**                          | **Hexagonal**                       |
+|----------------------------|--------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| **Complejidad**             | Baja, la más simple                  | Moderada                            | Moderada-alta                       | Alta, muy compleja                  | Alta, muy compleja                  |
+| **Escalabilidad**           | Escalable, pero más esfuerzo         | Buena escalabilidad                 | Excelente para grandes aplicaciones | Excelente para aplicaciones grandes | Excelente para aplicaciones grandes |
+| **Testabilidad**            | Difícil si los controladores crecen   | Buena testabilidad                  | Buena testabilidad                  | Excelente testabilidad              | Excelente testabilidad              |
+| **Facilidad de comprensión**| Fácil para principiantes             | Moderada                            | Moderada, conceptos nuevos          | Curva de aprendizaje alta           | Curva de aprendizaje alta           |
+| **Flexibilidad**            | Baja flexibilidad                    | Baja flexibilidad                   | Baja flexibilidad                   | Buena flexibilidad                  | Alta flexibilidad                   |
+| **Adecuación para contador**| Adecuado                             | Adecuado                            | Útil si la app crece                | Excesivo para un contador           | Excesivo para un contador           |
+
+
 ## 1- Arquitectura CLEAN:
 ![image](https://github.com/user-attachments/assets/8a085861-0185-49cd-9a7a-b2d4f4d265d1)
 
